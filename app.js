@@ -16,10 +16,10 @@ function Snake() {
 		for(var i=0;i<this.tail.length;i++){
 			var pos = this.tail[i];
 			var d = dist(this.x,this.y,pos.x,pos.y);
-			if(d < 1){
-				this.total = 0;
-				this.tail = [];
-			}
+			// if(d < 1){
+			// 	this.total = 0;
+			// 	this.tail = [];
+			// }
 		}
 	}
 
@@ -69,7 +69,8 @@ function Snake() {
 }
 
 function setup() {
-	createCanvas(500, 500);
+	createCanvas(screen.width-30,screen.height-100 );
+  	canvas.style.border = '5px solid red';
   	s = new Snake();
   	frameRate(10);
   	pickLocation();
